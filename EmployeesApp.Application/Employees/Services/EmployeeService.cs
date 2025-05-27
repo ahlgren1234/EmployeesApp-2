@@ -29,5 +29,5 @@ public class EmployeeService(IEmployeeRepository employeeRepository) : IEmployee
     }
 
     public bool CheckIsVIP(Employee employee) =>
-        employee.Email.StartsWith("ANDERS", StringComparison.CurrentCultureIgnoreCase);
+        employee.Email.StartsWith("ADMIN", StringComparison.CurrentCultureIgnoreCase);
 }
