@@ -5,11 +5,12 @@ namespace EmployeesApp.Application.Employees.Services;
 
 public class EmployeeService(IEmployeeRepository employeeRepository) : IEmployeeService
 {
-    public void Add(Employee employee)
+    public Employee Add(Employee employee)
     {
         employee.Name = ToInitalCapital(employee.Name);
         employee.Email = employee.Email.ToLower();
         employeeRepository.Add(employee);
+        return employee;
     }
 
     private static string ToInitalCapital(string s) =>
